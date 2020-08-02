@@ -1,6 +1,7 @@
 *, *:after, *:before {
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Actor', sans-serif;
 }
 
 body {
@@ -39,6 +40,7 @@ body {
 }
 
 .description {
+    font-family: Average;
     font-size: 32px;
     line-height: 39px;
     color: rgba(255, 255, 255, 0.8);
@@ -57,11 +59,13 @@ body {
 }
 
 .mini-description {
+    font-family: Average;
     font-size: 22px;
     line-height: 27px;
 }
 
 .footer {
+    font-family: Average;
     font-size: 22px;
     line-height: 27px;
     text-align: center;
@@ -102,9 +106,11 @@ body {
 }
 
 .music-name {
+    font-family: Average;
     /*background-color: red;*/
     font-size: 24px;
     line-height: 29px;
+    width: 30%;
 }
 
 .player-line {
@@ -150,3 +156,96 @@ body {
 .time-line {
     margin-bottom: 20px;
 }
+
+input[type=range] {
+    background-color: transparent;
+    -webkit-appearance: none;
+    margin: 18px 0;
+    width: 100%;
+  }
+  
+  input[type=range]:focus {
+      background-color: transparent;
+    outline: none;
+  }
+  
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    background: transparent;
+    border-radius: 20px;
+    border: 1px solid #ffffff;
+  }
+  
+  input[type=range]::-webkit-slider-thumb {
+    border: 1px solid #000000;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -7px;
+  }
+  
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: transparent;
+  }
+  
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    background: #3071a9;
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+  }
+  
+  input[type=range]::-moz-range-thumb {
+    border: 1px solid #000000;
+    height: 36px;
+    width: 16px;
+    border-radius: 3px;
+    background: transparent;
+    cursor: pointer;
+  }
+  
+  input[type=range]::-ms-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    border-width: 16px 0;
+    color: transparent;
+  }
+  
+  input[type=range]::-ms-fill-lower {
+    background: #2a6495;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+  }
+  
+  input[type=range]::-ms-fill-upper {
+    background: #3071a9;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+  }
+  
+  input[type=range]::-ms-thumb {
+    border: 1px solid #000000;
+    height: 36px;
+    width: 16px;
+    border-radius: 3px;
+    background: transparent;
+    cursor: pointer;
+  }
+  
+  input[type=range]:focus::-ms-fill-lower {
+    background: #ffffff;
+  }
+  
+  input[type=range]:focus::-ms-fill-upper {
+    background: transparent;
+  }

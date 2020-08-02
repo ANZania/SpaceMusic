@@ -1,9 +1,11 @@
 'use strict';
+import { musicPlayerInit } from './musicPlayer.js';
 
 const container = document.querySelector('.container');
 const btnStart = document.querySelector('.btn-start');
 const choose = document.querySelector('.choose');
 const main = document.querySelector('.main');
+
 
 btnStart.addEventListener('click', () => {
     container.classList.add('animate__fadeOutUp');
@@ -11,4 +13,6 @@ btnStart.addEventListener('click', () => {
     choose.style.optical = '1';
     main.style.filter = 'brightness(40%)';
 });
+
+musicPlayerInit();
   
