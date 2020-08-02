@@ -5,9 +5,14 @@ export const musicPlayerInit = () => {
     const next = document.querySelector('.next');
     const playerNav = document.querySelector('.player-nav');
     const musicName = document.querySelector('.music-name');
+    const current = document.querySelector('.current');
+    const total = document.querySelector('.total');
+    const musicProgress = document.querySelector('.music-progress');
 
     const playlist = ['Imagine Dragons - Beliver', 'TFK - Move', 'TFK - Oxygen'];
     let trackIndex = 0;
+
+    const addZero = n => n < 10 ? '0' + n : n;
 
     const loadTrack = () => {
         const isPlayed = audioPlayer.paused;
@@ -67,4 +72,29 @@ export const musicPlayerInit = () => {
         nextTrack();
         audioPlayer.play();
     });
+
+    audioPlayer.addEventListener('timeupdate', () => {
+        const duration = audioPlayer.duration;
+        const currentTime = audioPlayer.currentTime;
+        const progress = (currentTime / duration) * 100;
+
+        musicProgress.value = progress;
+
+        const minutesPassed = Math.floor(currentTime / 60) || '0';
+        const secondsPassed = Math.floor(currentTime % 60) || '0';
+
+        const minutesTotal = Math.floor(duration / 60) || '0';
+        const secondsTotal = Math.floor(duration % 60) || '0';
+
+        current.textContent = `${addZero(minutesPassed)}:${addZero(secondsPassed)}`
+        total.textContent = `${addZero(minutesTotal)}:${addZero(secondsTotal)}`
+    });
+
+    musicProgress.addEventListener('input', () => {
+        const duration = audioPlayer.duration;
+        const value = musicProgress.value;
+
+        audioPlayer.currentTime = (value * duration) / 100;
+    });
+
 };

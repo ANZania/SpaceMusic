@@ -148,20 +148,20 @@ body {
 
 .time-line {
     width: 100%;
-    height: 5px;
-    border: 1px solid #FFFFFF;
-    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.time-line {
-    margin-bottom: 20px;
+.music-time {
+    font-family: Average;
 }
 
 input[type=range] {
     background-color: transparent;
     -webkit-appearance: none;
     margin: 18px 0;
-    width: 100%;
+    width: 90%;
   }
   
   input[type=range]:focus {
