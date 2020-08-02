@@ -1,12 +1,19 @@
 *, *:after, *:before {
+    margin: 0;
     box-sizing: border-box;
 }
 
 body {
-    background:url(../img/main-2.jpg) no-repeat;
+    /*background: url(../img/main-2.jpg) no-repeat;*/
     overflow: hidden;
     background-size: cover;
     color: white;
+}
+
+.main {
+    z-index: -999999999;
+    position: fixed;
+    transition: all 1s;
 }
 
 .container {
@@ -24,7 +31,7 @@ body {
 }
 
 .name {
-    margin-top: 100px;
+    margin-top: 80px;
     font-size: 120px;
     line-height: 144px;
     color: #FFFFFF;
@@ -72,7 +79,7 @@ body {
 }
 
 .choose-your_mood {
-    margin-top: 20px;
+    padding-top: 20px;
     font-size: 60px;
     line-height: 72px;
     margin-bottom: 36px;
