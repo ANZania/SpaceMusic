@@ -7,6 +7,6 @@ const choose = document.querySelector('.choose');
 btnStart.addEventListener('click', () => {
     container.classList.add('animate__fadeOutUp');
     choose.classList.add('animate__fadeInUp');
-    choose.style.display = 'block';
+    choose.style.optical = '1';
 });
   

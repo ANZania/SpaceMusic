@@ -4,14 +4,17 @@
 
 body {
     background:url(../img/main-2.jpg) no-repeat;
-    /*overflow: hidden;*/
+    overflow: hidden;
     background-size: cover;
     color: white;
 }
 
 .container {
+    position: absolute;
+    top: 0;
     display: block;
-    margin: auto;
+    /*margin: auto;*/
+    margin-left: 25%;
     text-align: center;
     /*background-color: #fff;*/
     min-width: 50%;
@@ -62,14 +65,14 @@ body {
 
 .choose {
     margin: auto;
-    
     /*display: none;*/
     /*margin-top: 100px;*/
     width: 80%;
+    opacity: 0;
 }
 
 .choose-your_mood {
-    margin-top: 80px;
+    margin-top: 20px;
     font-size: 60px;
     line-height: 72px;
     margin-bottom: 36px;
@@ -138,5 +141,5 @@ body {
 }
 
 .time-line {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
