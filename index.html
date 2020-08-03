@@ -12,10 +12,11 @@
 </head>
 <body>
     <img src="img/main-2.jpg" alt="" class="main">
+    
     <div class="choose animate__animated audio">
-        <div class="choose-your_mood">Choose your mood:</div>
         <audio class="audio-player" src="audio/Imagine Dragons - Beliver.mp3"></audio>
-        <!--<embed src="audio/TfkOxygen.mp3" width="700" height="45" align="left" hidden="False" autostart="True" loop="True">-->
+        <div class="choose-container animate__animated">
+        <div class="choose-your_mood">Choose your mood:</div>
         <div class="ganre-container">
             <div class="ganre"></div>
             <div class="ganre"></div>
@@ -28,6 +29,7 @@
             <div class="ganre"></div>
             <div class="ganre"></div>
         </div>
+        </div>
         <div class="player-line">
             <div class="music-name">Imagine Dragons - Beliver</div>
             <div class="player-nav">
@@ -36,7 +38,7 @@
                 <img src="img/next.svg" alt="" class="next">
             </div>
             <div class="player-func">
-                <input type="range" class="music-volume" min="0" max="100" step="1" value="100">
+                <input type="range" class="music-volume animate__animated" min="0" max="100" step="1" value="100">
                 <img src="img/volume-icon.svg" alt="" class="volume">
                 <img src="img/fav-ico.svg" alt="" class="fav">
                 <img src="img/burger.svg" alt="" class="burger">
@@ -56,7 +58,15 @@
         <div class="mini-description">1500+ tracks for your background</div>
         <div class="footer">Learn more about project</div>
     </div>
-    
+    <div class="play-list-music animate__animated">
+        <div class="play-list-header">
+            <div class="now-playing">Now playing</div>
+            <div class="favorite">Favorite</div>
+        </div>
+        <div class="list">
+            
+        </div>
+    </div>
 <!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>-->
