@@ -8,8 +8,12 @@ export const musicPlayerInit = () => {
     const current = document.querySelector('.current');
     const total = document.querySelector('.total');
     const musicProgress = document.querySelector('.music-progress');
+    const musicVolume = document.querySelector('.music-volume');
 
-    const playlist = ['Imagine Dragons - Beliver', 'TFK - Move', 'TFK - Oxygen'];
+    const playlist = ['Imagine Dragons - Beliver', 'TFK - Move', 'TFK - Oxygen', 'grandson - Blood Water', 'grandson - Identity', 
+        'grandson - thoughts prayers', 'Linkin Park - Numb', 'MORGENSHTERN - Пососи', 'MORGENSHTERN - Yung Hefner', 'MORGENSHTERN feat. Витя AK - РАТАТАТА',
+        'NEFFEX - Numb', 'Pyrokinesis - Чёрное солнышко', 'Pyrokinesis -Корми демонов по рассписанию', 'The Score - Born For This', 
+        'The Score - Miracle', 'The Score - Stronger', 'Twenty One Pilots - Chlorine', 'Twenty One Pilots - Heathens'];
     let trackIndex = 0;
 
     const addZero = n => n < 10 ? '0' + n : n;
@@ -96,5 +100,11 @@ export const musicPlayerInit = () => {
 
         audioPlayer.currentTime = (value * duration) / 100;
     });
+
+    musicVolume.addEventListener('input', () => {
+        audioPlayer.volume = musicVolume.value / 100;
+    });
+
+    videoVolume.value = videoPlayer.volume * 100;
 
 };
