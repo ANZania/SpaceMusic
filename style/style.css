@@ -29,10 +29,10 @@ body {
     /*opacity: 0;*/
     display: block;
     /*margin: auto;*/
-    margin-left: 25%;
+    /*margin-left: 25%;*/
     text-align: center;
     /*background-color: #fff;*/
-    min-width: 50%;
+    min-width: 100%;
     max-width: 1200px;
     z-index: 999999999;
     /*height: 800px;*/
@@ -181,7 +181,27 @@ body {
 }
 
 .music-time {
-    font-family: Scope One;
+    font-family: Roboto;
+}
+
+.burger:hover {
+    cursor: pointer;
+}
+
+.fav:hover {
+    cursor: pointer;
+}
+
+.play:hover {
+    cursor: pointer;
+}
+
+.next:hover {
+    cursor: pointer;
+}
+
+.prev:hover {
+    cursor: pointer;
 }
 
 .list { 
@@ -223,16 +243,13 @@ body {
     width: 5.5px;
 }
 
-.music-volume {
-    opacity: 1;
-}
-
 .play-list-music {
     margin: auto;
     /*display: none;*/
     /*margin-top: 100px;*/
     width: 80%;
     opacity: 0;
+    height: 500px;
     padding-top: 40px;
     position: absolute;
     top: 0;
@@ -263,9 +280,18 @@ body {
     justify-content: space-between;
     border-bottom: 0.3px solid #ffffff;
     padding: 5px 0;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .song:hover {
+    cursor: pointer;
+    color: #FFFFFF;
+    background: radial-gradient(50% 32679.02% at 50% 50%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.159375) 50%, rgba(255, 255, 255, 0) 100%);
+}
+
+.active {
+    cursor: pointer;
+    color: #FFFFFF;
     background: radial-gradient(50% 32679.02% at 50% 50%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.159375) 50%, rgba(255, 255, 255, 0) 100%);
 }
 
@@ -371,3 +397,33 @@ input[type=range] {
   input[type=range]:focus::-ms-fill-upper {
     background: transparent;
   }
+
+.not-choosen {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.favorite:hover {
+    cursor: pointer;
+}
+
+.now-playing:hover {
+    cursor: pointer;
+}
+
+.play-list-music {
+    margin-top: 1000px;
+}
+
+.list-fav {
+    opacity: 0;
+    margin-top: 1000px;
+    padding-right: 20px;
+    height: 470px;
+    overflow-y: scroll;
+}
+
+@keyframes volume-op {
+    from { width: 0; }
+    50% { width: 50%; }
+    to { width: 100%; }
+}
